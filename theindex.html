@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihal Nazeer | Full-Stack Data Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --bg-body: #050505;
+            --bg-card: #0f172a;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --border: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-body); color: var(--text-main); line-height: 1.7; }
+
+        nav { background: rgba(5, 5, 5, 0.95); padding: 1.5rem 10%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-links { list-style: none; display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        header { padding: 160px 10% 100px; text-align: center; background: radial-gradient(circle at 50% 0%, #1e293b 0%, #050505 70%); }
+        .hero-text h1 { font-size: 4rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 20px; }
+        .hero-text span { color: var(--primary); }
+        .hero-text p { font-size: 1.2rem; color: var(--text-dim); max-width: 700px; margin: 0 auto; }
+
+        section { padding: 100px 10%; border-bottom: 1px solid var(--border); }
+        .section-title { font-size: 2.5rem; margin-bottom: 60px; text-align: center; font-weight: 800; }
+        .section-title span { color: var(--primary); }
+
+        /* Elaborated Project Cards with Images */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .card { background: var(--bg-card); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        
+        .card-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid var(--border); opacity: 0.8; transition: 0.3s; }
+        .card:hover .card-img { opacity: 1; }
+        
+        .card-content { padding: 30px; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+        .card p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 20px; }
+        .card ul { list-style: none; margin-bottom: 20px; font-size: 0.9rem; color: var(--text-dim); }
+        .card li { margin-bottom: 8px; display: flex; gap: 10px; }
+        .card li::before { content: '✔'; color: var(--primary); }
+
+        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag { background: rgba(59, 130, 246, 0.1); color: var(--primary); padding: 5px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.2); }
+
+        /* Hiring Banner */
+        .hire-banner { background: linear-gradient(135deg, #1e293b 0%, #050505 100%); padding: 80px 10%; text-align: center; border-bottom: 1px solid var(--border); }
+        .hire-btn { background: #ffffff; color: #000000; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; margin-top: 25px; }
+        .hire-btn:hover { background: var(--primary); color: white; transform: scale(1.05); }
+
+        /* Form */
+        form { background: #0a0a0a; padding: 40px; border-radius: 20px; border: 1px solid var(--border); }
+        .form-control { margin-bottom: 20px; }
+        .form-control label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+        .form-control input, .form-control textarea { width: 100%; padding: 12px; background: #111; border: 1px solid var(--border); border-radius: 8px; color: white; outline: none; }
+        .form-control input:focus { border-color: var(--primary); }
+
+        footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.8rem; }
+        .socials { margin-bottom: 20px; }
+        .socials a { color: var(--text-dim); font-size: 1.5rem; margin: 0 10px; }
+
+        @media (max-width: 768px) { .hero-text h1 { font-size: 2.8rem; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">NIHAL<span>.N</span></a>
+        <ul class="nav-links">
+            <li><a href="#vision">Mission</a></li>
+            <li><a href="#projects">Portfolio</a></li>
+            <li><a href="#experience">Credentials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="hero-text">
+            <h1>Nihal <span>Nazeer</span></h1>
+            <p>Computer Science Engineer specializing in Data Analytics & Java Architecture. Dedicated to building high-performance solutions at LPU.</p>
+        </div>
+    </header>
+
+    <section id="vision">
+        <h2 class="section-title">Mission & <span>Approach</span></h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <div style="background: var(--bg-card); padding: 40px; border-radius: 20px;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">Actionable Logic</h3>
+                <p style="color: var(--text-dim);">I focus on translating complex data into efficient code. My training in Java Fundamentals and Python allows me to bridge the gap between back-end reliability and data-driven insights.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 40px; border-radius: 20px;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">Performance Driven</h3>
+                <p style="color: var(--text-dim);">Whether optimizing a 2D engine or cleaning a 10,000-row dataset, my priority is always reducing latency and increasing clarity for the end-user.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Elaborated <span>Case Studies</span></h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800" alt="Gaming Engine" class="card-img">
+                <div class="card-content">
+                    <h3>Mini Mario Engine</h3>
+                    <p>A Python-based 2D gaming environment focused on physics and optimization.</p>
+                    <ul>
+                        <li>25% frame-lag reduction through asset pooling.</li>
+                        <li>Implemented modular OOP character logic.</li>
+                        <li>Designed dynamic difficulty scaling.</li>
+                    </ul>
+                    <div class="tag-container">
+                        <span class="tag">Python</span><span class="tag">Pygame</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda546697c?auto=format&fit=crop&q=80&w=800" alt="Data Science" class="card-img">
+                <div class="card-content">
+                    <h3>E-commerce Intelligence</h3>
+                    <p>Data-driven analysis of 10,000+ orders to predict consumer behavior.</p>
+                    <ul>
+                        <li>Discovered seasonal demand peaks via Pandas.</li>
+                        <li>Automated regional sales reports using SQL.</li>
+                        <li>Visualized outliers using Seaborn/Matplotlib.</li>
+                    </ul>
+                    <div class="tag-container">
+                        <span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800" alt="Web Design" class="card-img">
+                <div class="card-content">
+                    <h3>Event Management UI</h3>
+                    <p>High-conversion responsive interface for university event branding.</p>
+                    <ul>
+                        <li>30% increase in content clarity metrics.</li>
+                        <li>Mobile-first CSS Grid/Flexbox architecture.</li>
+                        <li>Certified 300-hour Web Design foundation.</li>
+                    </ul>
+                    <div class="tag-container">
+                        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Credentials & <span>Awards</span></h2>
+        <div class="grid">
+            <div class="card-content" style="background:var(--bg-card); border-radius:20px; border:1px solid var(--border);">
+                <h3>Core Competencies</h3>
+                <p><strong>Dev:</strong> Java (Skillstone), Python, C, SQL<br>
+                <strong>Data:</strong> Pandas, NumPy, Tableau, Excel<br>
+                <strong>Systems:</strong> Hardware & OS (IBM), Cisco Packet Tracer</p>
+            </div>
+            <div class="card-content" style="background:var(--bg-card); border-radius:20px; border:1px solid var(--border);">
+                <h3>Key Milestones</h3>
+                <p>• <strong>3rd Runner Up</strong>: One India Competition (LPU)<br>
+                • <strong>300h Certification</strong>: freeCodeCamp Web Design<br>
+                • <strong>Silver Medalist</strong>: 1500m Athletics</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Inquiry <span>Portal</span></h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <div>
+                <h3 style="margin-bottom: 20px;">Let's discuss a role.</h3>
+                <p style="color: var(--text-dim); margin-bottom: 20px;">Seeking internship opportunities for 2026. Available for technical collaboration and Junior Developer roles.</p>
+                <p><i class="fas fa-envelope" style="color:var(--primary)"></i> nihalsnazeer@gmail.com</p>
+                <p><i class="fas fa-phone" style="color:var(--primary)"></i> +91 7902873953</p>
+            </div>
+            <form>
+                <div class="form-control">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Full Name">
+                </div>
+                <div class="form-control">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="email@company.com">
+                </div>
+                <div class="form-control">
+                    <label>Message</label>
+                    <textarea rows="4" placeholder="How can I help your team?"></textarea>
+                </div>
+                <button type="submit" style="background:var(--primary); color:white; border:none; padding:12px; width:100%; border-radius:8px; font-weight:700; cursor:pointer;">SUBMIT MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="hire-banner">
+        <h2 style="font-size: 2.5rem;">Ready to strengthen your <span>engineering team?</span></h2>
+        <p style="color: var(--text-dim); font-size: 1.1rem; margin-top: 10px;">Available for Summer Internships and Data Science roles.</p>
+        <a href="mailto:nihalsnazeer@gmail.com" class="hire-btn">HIRE ME NOW</a>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="https://linkedin.com/in/nyhaln"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/nyhal-n"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2026 Nihal Nazeer | LPU Academic Task 1 Submission</p>
+    </footer>
+
+</body>
+</html>
